@@ -1,0 +1,1 @@
+document.body.append((()=>{const e=document.createElement("div");return e.innerHTML="<h2>Hello World</h2>",e})());
