@@ -10,7 +10,8 @@ const Header = (props) => { // props are custom properties which are provided by
         setInput(e.target.value);
     }
 
-    const addTodo = () => {
+    const addTodo = (e) => {
+        e.preventDefault(); // This prevents the default behaviour of form element which causes the page to refresh
         // let arr = todos;
         // arr.push(input);
         // setTodos(arr);
@@ -20,11 +21,13 @@ const Header = (props) => { // props are custom properties which are provided by
 
     return (
         <div>
-            <input
-                value={input}
-                onChange={inputChange}
-            />
-            <button onClick={addTodo}>Add</button>
+            <form onSubmit={addTodo}>
+                <input
+                    value={input}
+                    onChange={inputChange}
+                />
+                <button type="submit">Add</button>
+            </form>
 
             <ul>
                 {/* {todos.map((todo, ind) => {
