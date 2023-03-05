@@ -1,11 +1,18 @@
 import { useState } from "react";
 
 const Header = () => {
-    const [state] = useState(0);
+    const [state, setState] = useState(0);
+
+    const increment = () => {
+        setState(state + 1);
+    }
 
     return (
         <div>
             {state}
+            <br />
+
+            <button onClick={increment}>+</button>
         </div>
     )
 }
