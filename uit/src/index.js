@@ -5,6 +5,6 @@ import Header from './components/header';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<>
-		<Header /> {/* Default Export */}
+		<Header name="Talha" age={25} /> {/* Default Export */}
 	</>
 );

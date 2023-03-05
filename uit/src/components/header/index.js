@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-const Header = () => {
+const Header = (props) => { // props are custom properties which are provided by the parent component
+    // the process of passing data from parent component to child component is called data binding
     const [state, setState] = useState(0);
 
     const increment = () => {
@@ -9,6 +10,8 @@ const Header = () => {
 
     return (
         <div>
+            <h1>{props.name}</h1>
+            <h2>{props.age}</h2>
             {state}
             <br />
 
