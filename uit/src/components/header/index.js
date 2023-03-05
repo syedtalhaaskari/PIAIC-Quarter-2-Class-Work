@@ -6,12 +6,4 @@ const Header = () => {
     )
 }
 
-export const ABC = () => {
-    return (
-        <div>
-            LAJfioajdioasjiodjasiodjsa
-        </div>
-    )
-}
-
 export default Header;
