@@ -11,7 +11,11 @@ const Header = (props) => { // props are custom properties which are provided by
     }
 
     const addTodo = () => {
-        console.log("Add Todo");
+        // let arr = todos;
+        // arr.push(input);
+        // setTodos(arr);
+        setTodos([...todos, input]);
+        setInput("");
     }
 
     return (
