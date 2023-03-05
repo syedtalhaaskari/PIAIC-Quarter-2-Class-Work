@@ -19,6 +19,14 @@ const Header = (props) => { // props are custom properties which are provided by
         setInput("");
     }
 
+    const isDelete = e => {
+        // console.log(e)
+        // let arr = todos;
+        // arr.splice(e, 1);
+        // setTodos([...arr]);
+        setTodos(todos.filter((todo, ind) => ind !== e ));
+    }
+
     return (
         <div>
             <form onSubmit={addTodo}>
@@ -37,6 +45,7 @@ const Header = (props) => { // props are custom properties which are provided by
                 })} */}
                 {todos.map((todo, ind) => <li key={ind}>
                     {todo}
+                    <button onClick={isDelete.bind(null, ind)}>Delete</button>
                 </li>)}
             </ul>
 
