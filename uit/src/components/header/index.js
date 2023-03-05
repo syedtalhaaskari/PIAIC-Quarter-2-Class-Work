@@ -26,7 +26,17 @@ const Header = (props) => { // props are custom properties which are provided by
             />
             <button onClick={addTodo}>Add</button>
 
-            <h5>{input}</h5>
+            <ul>
+                {/* {todos.map((todo, ind) => {
+                    return <li key={ind}>
+                        {todo}
+                    </li>
+                })} */}
+                {todos.map((todo, ind) => <li key={ind}>
+                    {todo}
+                </li>)}
+            </ul>
+
         </div>
     )
 }
