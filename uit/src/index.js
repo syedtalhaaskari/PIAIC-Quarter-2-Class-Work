@@ -5,9 +5,7 @@ import Header, { ABC } from './components/header';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<>
-		<h1>Hello</h1>
-		Test
-		<Header />
-		<ABC />
+		<Header /> {/* Default Export */}
+		<ABC /> {/* Non-Default Export */}
 	</>
 );
