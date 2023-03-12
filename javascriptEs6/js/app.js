@@ -103,7 +103,7 @@ console.log("9 ", user?.cities?.visited); // This will not through error. "?" Th
 let ameen = user;
 ameen.userName = "Ameen Alam";
 console.log("10 ", ameen.userName); // This will change userName of both ameen and user
-console.log("11 ", user.userName); 
+console.log("11 ", user.userName);
 
 user.userName = "Syed Talha Askari"
 let hamza = Object.assign({}, user);
@@ -117,3 +117,20 @@ deepCopy = JSON.parse(deepCopy);
 deepCopy.collection.cars = ["mehran"];
 console.log("14 ", deepCopy.collection.cars); // This will deep clone object iteratively
 console.log("15 ", user.collection.cars);
+
+// Destructuring
+// The method of extracting values from variables is called destructuring
+console.log("-----------------------------------------------------------");
+console.log("Destructuring");
+let { userName: users, phone, email } = user;
+console.log("16 ", users);
+console.log("17 ", phone);
+console.log("18 ", email);
+
+let arr = ["PIAIC", "JS", "CSS", "Web 3.0"];
+
+let [sub1, sub2, sub3] = arr;
+
+console.log("19 ", sub1);
+console.log("20 ", sub2);
+console.log("21 ", sub3);
