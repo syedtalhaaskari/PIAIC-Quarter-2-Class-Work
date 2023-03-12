@@ -1,4 +1,6 @@
 // Template Literals
+console.log("-----------------------------------------------------------");
+console.log("Template Literals")
 let num = 1;
 let text1 = "Test" + num + "AB";
 
@@ -10,6 +12,8 @@ AB`;
 console.log("b ", text2)
 
 // Hoisting
+console.log("-----------------------------------------------------------");
+console.log("Hoisting")
 let chr = "Talha" // This will work
 console.log(chr);
 // console.log(chr1);
@@ -66,3 +70,8 @@ console.log("9 ", TalhaJs); // Return Congratulations Mr. Talha you are passed J
 console.log("10 ", TalhaHtml); // Return Congratulations Mr. Talha you are passed HTML exam with 99%
 console.log("11 ", result2(200, 200)("Talha", "React")); // Return Congratulations Mr. Talha you are passed React exam with 100%
 
+// Events
+// In terms of html/browser - any activity on webpage is called event
+// Eg: Hover, click, resize, double click etc.
+console.log("-----------------------------------------------------------");
+console.log("Events");
