@@ -134,3 +134,13 @@ let [sub1, sub2, sub3] = arr;
 console.log("19 ", sub1);
 console.log("20 ", sub2);
 console.log("21 ", sub3);
+
+// Rest Operator
+// To get unknown amount of parameters in a function use rest operator
+// You will always use rest operator at the end of a function
+console.log("-----------------------------------------------------------");
+console.log("Rest Operator");
+function add(num, ...nums) {
+    console.log("22 ", num);
+    console.log("23 ", nums);
+}
