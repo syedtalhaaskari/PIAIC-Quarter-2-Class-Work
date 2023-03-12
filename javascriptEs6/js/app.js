@@ -75,3 +75,45 @@ console.log("11 ", result2(200, 200)("Talha", "React")); // Return Congratulatio
 // Eg: Hover, click, resize, double click etc.
 console.log("-----------------------------------------------------------");
 console.log("Events");
+
+// Object
+// It is a collection of key value pair, which can hold multiple data types in it
+console.log("-----------------------------------------------------------");
+console.log("Object");
+let user = {
+    userName: "Syed Talha Askari",
+    phone: "090078601",
+    age: 25,
+    email: "abc@gmail.com",
+    collection: {
+        cars: ["Rolls Royce", "Formula 1"]
+    }
+};
+
+console.log("1 ", user);
+console.log("2 ", user.userName);
+console.log("3 ", user["age"]);
+console.log("4 ", Object.keys(user));
+console.log("5 ", Object.values(user));
+console.log("6 ", user.country); // This will show undefined
+console.log("7 ", user.collection.cars);
+// console.log("8 ", user.cities.visited); // This will through an error
+console.log("9 ", user?.cities?.visited); // This will not through error. "?" This is called optional chaining
+
+let ameen = user;
+ameen.userName = "Ameen Alam";
+console.log("10 ", ameen.userName); // This will change userName of both ameen and user
+console.log("11 ", user.userName); 
+
+user.userName = "Syed Talha Askari"
+let hamza = Object.assign({}, user);
+hamza.collection.cars = ["Bugatti"];
+console.log("12 ", hamza.collection.cars); // This will change userName of only hamza but if we change car array of hamza then it will also change car array of user object
+console.log("13 ", user.collection.cars); // This is because Object.assign does not iteratively deep clone object it just clone the first level of given object
+
+hamza.collection.cars = ["Rolls Royce", "Formula 1"]
+let deepCopy = JSON.stringify(user);
+deepCopy = JSON.parse(deepCopy);
+deepCopy.collection.cars = ["mehran"];
+console.log("14 ", deepCopy.collection.cars); // This will deep clone object iteratively
+console.log("15 ", user.collection.cars);
