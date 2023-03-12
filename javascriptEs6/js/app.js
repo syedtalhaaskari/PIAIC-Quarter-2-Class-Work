@@ -140,7 +140,9 @@ console.log("21 ", sub3);
 // You will always use rest operator at the end of a function
 console.log("-----------------------------------------------------------");
 console.log("Rest Operator");
-function add(num, ...nums) {
-    console.log("22 ", num);
+function add(abc, ...nums) {
+    console.log("22 ", abc);
     console.log("23 ", nums);
 }
+
+add("3432432", 92323,343, "asadsad", "@43354")
