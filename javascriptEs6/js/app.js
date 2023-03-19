@@ -60,3 +60,17 @@ console.log({ prom3 });
 
 // visit jsv9000.app or latentflip.com to understand how js manage tasks
 // Use Promise.allSettled() to call multiple apis at the same time
+
+// fetch
+// It is a browser's built in api, it's not javascript's built in function
+console.log("-----------------------------------------------------------");
+console.log("fetch")
+fetch('https://jsonplaceholder.typicode.com/todos/')
+    .then(response => {
+        console.log("fetch then 1", response);
+        return response.json()
+    })
+    .then(json => console.log(json))
+    .catch(err => {
+        console.log("err", err);
+    })
