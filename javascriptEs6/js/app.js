@@ -74,3 +74,20 @@ fetch('https://jsonplaceholder.typicode.com/todos/')
     .catch(err => {
         console.log("err", err);
     })
+
+// async/await
+// It is an alternate of Promise
+console.log("-----------------------------------------------------------");
+console.log("async/await")
+const apiCalled = async () => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos/');
+        console.log("async/await response", response);
+        const data = await response.json();
+        console.log("async/await data", data);
+    } catch (e) {
+        console.log("err", e);
+    }
+}
+
+apiCalled();
